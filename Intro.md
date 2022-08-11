@@ -967,6 +967,611 @@ String str = "Newton school";
 String str = new String("Newton School");
 
 
+* ASCII values
+ASCII stands for American school code for information interchange
+It is a character encoding standard used in digital communication
+Every character has an ASCII value associated to it.
+'A'  > 'a'
+65 > 97 = false
+
+Conversion of one data type into another is called type casting 
+
+int asciiOfA = (int) 'A';
+
+'Z' > 'X' true
+
+s1 = "Arun" 
+s2 = "ArC"
+
+s1 > s2
+
+
+#1 Program to count the number of vowels and consonants in a string
+
+Input - "linkedin"
+output - vowels: 3 consonants: 5
+
+
+#2 Program to count the number of uppercase, lowercase, numeric characters and special characters in a string
+
+Input - "$TrIng@12^ArEF%n0"
+Ouput - uppercase: 5, lowercase: 5 numbers: 3 special chars: 4
+
+
+
+
+#3 Program to count the frequency of each character in a string (only smallcase alphabets)
+Input - "elephant"
+Output - e: 2 l: 1 p: 1 h: 1 a: 1 n: 1 t: 1
+
+Input - "godisgood"
+output - g: 2 o: 3 d: 2 i: 1 s: 1 o: 2
+
+'a' - 'a' = 0
+'b' - 'a' = 1
+'z' - 'a' = 25
+
+int freq[26]; freq['!']++
+
+freq['e' - 'a']++;  = freq[4]++ freq['e']++ = freq[101]++
+freq['l' - 'a']++; = freq[11]++ freq['z']++ = freq[122]++
+freq['e' - 'a']++; 				freq['z'-'a'] = freq[25]
+freq['p' - 'a']++;	
+freq['h' - 'a']++;
+freq['a' - 'a']++;
+freq['n' - 'a']++;
+freq['t' - 'a']++;
+
+
+[0,,0,0,0,2,0,0,0,00,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+for i=0 to str.length()
+	Sysout(str.charAt(i):)
+	Sysout(freq[str.charAt(i) - 'a'])
+
+
+#4 Program to print all the common characters in two strings in alphabetical order (only smallcase characters)
+Input - 
+String1: hhhellooz
+String2: ghefoph
+Output: ehho
+
+'h'-'a' = 
+
+i=7
+freq1[26] = [0,0,0,0,1,0,0,3,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1]
+
+freq2[26] = [0,0,0,0,1,1,1,2,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0]
+
+ehho
+
+char ch = (char)97;
+char ch = (char) (4 + 'a')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#7 Program to print all the distinct characters in two strings  in alphabetical order (only smallcase characters)
+Input - 
+String1: hhhellooz
+String2: ghefoph
+Output: fglpz
+
+#8 Program to check if two strings are anagrams of each other
+Two strings are called anagrams if both the strings contain the same characters same number of times
+Input:
+String1: silent
+String2: listen
+Output: true
+
+Input2:
+String1: triangle
+String2: integral
+output: true
+
+Input3:
+String1: triangle
+String2: integrally
+output: false
+
+#1 remove duplicate characters from a string (only smallcase characters)
+Input - character
+ouput - charte
+Input - znnnno
+output - zno
+
+
+* Two pointers algorithm
+It is an algorithm used to search for a pair of elements in a sorted array based on some condition.
+
+
+Problem: Given a sorted array having N  integers, find if there exists any pair of elements such that their 
+sum equal to X.
+Input: 10, 20, 35, 50, 75, 80
+X=70
+
+
+for (i=0;i<N;i++) {
+	for (j=i+1;j<N;j++) {
+		if (arr[i] + arr[j] == X) {
+		return true;
+	}
+	}
+}
+TC: O(n^2)
+
+Two pointers:
+
+i=0,j=5 (n-1)
+a[i]+a[j]  = 90 > 70 j--
+
+i=0,j=4
+a[i]+a[j] = 85 > 70 j--
+
+i=0,j=3
+a[i]+a[j] = 60 < 70 i++
+
+i=1 j=3
+a[i]+a[j]=70 = X
+so pair with sum 70 is (20,50)
+
+
+Sort an array of 0s and 1s
+Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 
+
+
+for (i=0;i<n;i++){
+	if (a[i]==0) {
+		countOfO++;
+	}
+	else {
+		countOf1++;
+	}
+}
+
+for (i=0;i<countOf0;i++){ 0, 0, 0, 0, 0, 1, 1, 1, 1, 1
+	sysout(0+", ")
+}
+for (i=0;i<countOf1;i++){
+	sysout(1+", ")
+}
+
+
+* Sorting Algorithms
+
+Sorting is a technique in which we rearrange the elements of an array in either increasing or decreasing order.
+There are many sorting algorithms available:
+* Bubble sort
+* Insertion sort
+* Selection sort
+* Quick sort
+* Merge sort
+
+Input: 12 11 13 5 6
+Output: 5 6 11 12 13
+
+These algorithms give the same output for a given input array, the difference is in their performance i.e. 
+their time and space complexity.
+
+
+* Bubble sort
+Input: 5, 1, 4, 2, 8
+Output: 1, 2, 4, 5, 8
+
+i=0
+5 1 4 2 8
+1 5 4 2 8
+1 4 5 2 8
+1 4 2 5 8
+
+i=1
+1 4 2 5 8
+1 2 4 5 8
+
+i=2
+1 2 4 5 8
+
+i=3
+1 2 4 5 8
+
+
+i=0
+12 11 13 5 6
+11 12 13 5 6
+11 12 5 13 6
+11 12 5 6 13
+
+i=1
+11 12 5 6 13
+11 5 12 6 13
+11 5 6 12 13
+
+i=2
+11 5 6 12 13
+5 11 6 12 13
+5 6 11 12 13
+
+i=3
+5 6 11 12 13
+
+TC: O(N^2)
+SC: O(1)
+
+
+* Insertion sort
+
+Input: 12 11 13 5 6
+
+First pass:
+
+12 11 13 5 6
+
+11 12 13 5 6
+
+Second pass: 
+11 12 13 5 6
+
+Third pass:
+11 12 13 5 6
+5 11 12 13 6
+
+Fourth pass:
+5 11 12 13 6
+5 6 11 12 13
+
+TC: O(n^2)
+SC: O(n)
+
+* Selection sort
+
+12 11 6 5 13
+
+5 11 13 12 6
+
+5 6 13 12 11
+
+5 6 11 12 13	
+
+for (int i=0; i<n; i++ { 
+	min = arr[i];
+	for (int j=i+1; j<n; j++) {
+		if (arr[j] < min) {
+			min = arr[j];
+		}
+	}
+	// swap arr[i] and min
+	int temp = arr[i];
+	arr[i] = min;
+	min = temp;
+}
+
+TC: O(n^2)
+SC: O(1)
+
+* find min element in an array
+12 11 6 5 13
+
+
+Swap two numbers:
+input : a = 10, b = 20
+ouput : a = 20, b = 10
+
+int temp = a; // 10
+a = b; // 20
+b = temp; // 10
+
+
+* Quick sort
+
+Input: 4 5 3 2 7
+ouput: 2 3 4 5 7
+
+We will choose first element as pivot
+
+arr[0] = 4 is pivot
+partition the array such that all the elements smaller than 4 are on the left of it and all the elements greater than 4 are on the right of it
+
+partition(arr)
+
+array will become - 3 2 4 5 7
+
+now call quick sort for first half {3,2} and second half {5, 7}
+
+{3, 2}
+3 is pivot
+partition(arr)
+array will become {2, 3}
+
+{5, 7}
+5 is pivot
+partition(arr)
+array will become {5, 7}
+
+
+* Modulo Arithmetic
+
+5 % 3 = 2
+
+The range of int data type is -2^31 to 2^31-1
+
+multiply two numbers a and b
+
+1 <= a,b <=10^20
+
+Output the result modulus 10^31+7
+
+res = 10^20 * 10^20 = 10^40
+
+Rules in modulo arithmetic:
+
+1. (a+b)%c = (a%c + b%c)%c
+
+Example:
+a=15 b=17 c=7
+
+(15 + 17) % 7 = 32 % 7 = 4
+(15 % 7 + 17 % 7) % 7 = (1 + 3) % 7 = 4 % 7 = 4
+
+Problem: Find sum of two numbers. Print the sum modulus 127.
+Note: You can only use data type byte
+
+Constraints:
+1 <= a,b <= 127
+
+a = 127 b = 127 
+
+(127 + 127) % 127 = 254 % 127 = 0
+(127 % 127 + 127 % 127) % 127 = (0 + 0) % 127 = 0 % 127 = 0
+
+
+2. (a-b)%c = (a%c - b%c)%c 
+a = 20 b = 4 c = 7
+
+(20 - 4) % 7 = 16 % 7 = 2
+(20 % 7 - 4 % 7) % 7 = (6 - 4) % 7 = 2 % 7 = 2
+
+
+3. (a * b) mod c = (a % c * b % c) % c
+a = 12 b = 13 c = 5 
+
+(12 * 13) % 5 = 156  % 5 = 1
+(12 % 5 * 13 % 5) % 5 = (2 * 3) % 5 = 6 % 5 = 1
+
+
+* Modulo exponentiation
+
+a ^ b
+
+a,b <= 100
+
+a^b = 100 ^ 100
+
+Suppose x = 2 y = 3 p = 5
+Compute (x^y) % p
+
+(2^3)mod 5
+8  mod 5
+3
+
+
+* Modulo Inverse
+
+Given two integers a and m, find modulo inverse of a under m.
+
+a * x = 1 (mod m)
+and x should be less than m
+
+Example:
+a = 3 m = 11
+(3 * 4) mod 11 = 12 mod 11 = 1 
+This means 4 is modulo inverse of 3 under 11
+
+
+(3 * 4) % 11 = (3 % 11 * 4 % 11) % 11
+
+a = 10 m = 17
+(10 * x) % 17 = 1
+(10 * 12) % 17 = 120 % 17 = 1
+
+"11223344" + "334458"
+sum = 12
+in op strig = sum %10
+carry = sum/10
+02
+
+
+
+* Searching 
+
+Problem : [10, 20, 30, 70, 80, 60, 20, 90, 40]
+Find 20 in the array
+Output: true (Boolean)
+
+* Linear Search algorithm: When we traverse the whole array to search for an element, it is called linear search
+
+for (int i=0; i<arr.length; i++) {
+	if (arr[i] == X) {
+		Sysout(i)
+	}
+}
+return false;
+
+Time complexity of linear search: O(n)
+
+Problem : [10, 20, 30, 70, 80, 60, 20, 90, 40]
+Find all the positions of 20
+Output: 1, 6
+
+* Binary search
+
+It is a searching algorithm used in a sorted array by repeatedly dividing search interval into half.
+It is a divide and conquer algorithm.
+
+Input: 
+arr[] = {10, 20, 30, 50, 60, 80, 110, 130, 140, 170}, x = 90
+
+size = 10
+l is left most index of search interval, r is right most index of search interval
+l = 0, r = 9
+mid = (l + (r-1)) / 2 
+mid = 4
+check if arr[mid] == x
+l = 5 r= 6, mid = 5
+l = 6, r = 6, mid = 6
+Now, arr[mid] < x, so x lies in the right half
+
+l = mid + 1 = 5, r = 9
+mid = (5 + (9-1)) / 2 = (5 + 8) / 2 = 13 / 2 = 6
+
+check if arr[mid] == x
+Now, arr[mid] < x, so lies in right half
+
+l = 7, r = 9
+mid = (7 + (9-1)) / 2 = (7 + 8) / 2 = 15 / 2 = 7
+check if arr[mid] == x
+
+Now, arr[mid] < x, so lies in right half
+
+l = 8, r= 9
+mid = (8 + 8) / 2 = 8
+
+check arr[mid]
+arr[mid] = x, so we have found x
+
+
+Input: [2, 3, 4, 10, 40], x = 2
+
+size = 5
+l = 0, r = 4
+mid = (l+r)/2 = (0+4)/2 = 2
+check arr[mid]
+
+Now, arr[mid] > x, so x lies in left half
+
+l = 0, r = mid - 1 = 1
+mid = 0
+
+check arr[mid]
+
+arr[mid] = x, so x is found at index mid
+
+Time complexity of Binary Search: O(log(n))
+Space complexity is O(1)
+
+ 
+
+* Check if one string is rotation of another
+String1: abcd String2: cdab 
+output: true
+String1: abcd String2: dcab
+output: false
+
+
+
+String1.concat(String1) = abcdabcd
+check if String2 is part of concatenated string or not
+if (String1.concat(String1).indexOf(String2) != -1) 
+	return true
+else 
+	return false;
+
+
+
+* Hashing
+
+Hashing is a technique of transforming/mapping any given key into a value using a hash function.
+
+
+[11, 12, 13, 14, 15, 21, 22, 23]
+
+Hash function: x%10
+
+[1, 2, 3, 4, 5]
+
+key -> value
+11 -> 1
+12 -> 2
+13 -> 3
+14 -> 4
+15 -> 5
+21 -> 1
+22 -> 2
+23 -> 3
+
+Hash function: x+2
+key -> value
+11 -> 13
+12 -> 14
+13 -> 15
+14 -> 16
+15 -> 17
+
+
+There are data structures available in every programming language which implements/uses hashing.
+
+* HashTable
+It implements a hash table which maps key to values.
+
+In a hash table, there are two things, one is key and the other is value.
+We store key/value pairs in Hashtable
+
+Hashtable<Integer, String> ht = new Hashtable<Integer, String>(3, 0.5);
+
+ht.put(1, "firstValue");
+ht.put(2, "secondValue");
+ht.put(3, "thirdValue")
+
+
+Hashtable<Integer, Integer> ht = new Hashtable<Integer, Integer>();
+
+ht.put(1, 5);
+ht.put(2, 6);
+ht.put(3, 7)
+
+Hashtable takes two arguments:
+initial capacity: Default initial capacity is 11.
+load factor: Default load factor is 0.75
+
+
+int[] ar = new int[10]
+
+
+* Hashmap
+So it is same as Hashtable in syntax and functionality
+
+The only difference between hastable and hashmap:
+hashtable is synchronised and hashmap is non-synchronised
+
+Synchronised means that only one thread of a process can access it at one point of time and non-synchronised means multiple threads can access it at one point of time.
+
+
+* Time complexity:
+
+Hashtable/Hashmap provides get() and put() methods in constant time. Time complexity is O(1) for get() and put().
+
+
+* Applications of Hashtable/Hashmap:
+
+find all the distinct elements of an array
+[2, 4, 2, 3, 9, 3]
+output: 4, 9
+find all the duplicate elements of an array
+input: [2, 4, 2, 3, 9, 3]
+output: 2, 3
 
 
 
