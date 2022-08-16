@@ -1574,10 +1574,66 @@ input: [2, 4, 2, 3, 9, 3]
 output: 2, 3
 
 
+* Prefix Sum Subarray
+
+[10, 20, 2, 3, 5]
+
+for arr[2] = arr[0] and arr[1] are prefix
+for element arr[i], prefix subarray is arr[0].....arr[i-1]
+
+Prefix_sum = [10, 30, 32, 35, 40]
+
+what is prefix sum subarray for arr[2] = Prefix_sum[2]
+what is prefix sum subarray for arr[4] = Prefix_sum[4]
+
+prefix_sum[0] = arr[0];
+for (int i=1; i<n; i++) {
+	prefix_sum[i] = prefix_sum[i-1] + arr[i];
+}
 
 
+* Kadane's algorithm
+
+It is used to find largest sum of contiguous subarray
+
+3 cases:
+
+1. All positive elements in array:
+
+[2, 4, 7, 9, 1]
+complete array is the largest sum of contiguous subarray which is 23.
+
+2. All negative elements in array:
+
+[-2, -4, -7, -9, -1]
+
+Largest element in this array will give us largest sum of contiguous subarray which is -1.
 
 
+3. Mixture of positive and negative elements:
+
+[-2, 4, -7, 9, 1]  = 10
+
+[-2, -3, 4, -1, -2, 1, 5, -3]
+
+
+* Find sub array with given sum 
+
+[1, 4, 20, 3, 10, 5], sum = 33
+output: start = 2, end = 4
+
+curr_sum += arr[i] // 43
+
+cur_sum - sum = have we already seen this sum before ?
+38 - 33 = 5
+
+HashMap<curr_sum, index>
+
+[10, 2, -2, -20, 10], sum = -10
+output: start = 0, end = 3
+
+[10, 2, -2, -20, 10], sum = -15
+output: No subarray
 
 
 
