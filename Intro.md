@@ -1636,6 +1636,40 @@ output: start = 0, end = 3
 output: No subarray
 
 
+* Linked List
+	* Single linked list
+	* Doubly linked list
+	* Circular linked list
+
+What is linked list?
+Linked list is a data structure where elements are not stored in a contiguous mannner.
+The elements are linked to each other using memory address references.
+Each node contains a data element and a reference to the next element in the list
+
+Linked list vs Array ? (Advantages of LL):
+ - The size of array is fixed but the size of LL is dynamic.
+
+ - Insertion and deletion is array takes O(n) time but in LL, it takes constant time O(1).
+
+ Drawbacks of LL:
+  - Random  access of elements is not possible, to access elements/nodes in LL, we have to traverse the whole list
+
+  - Extra space or memory is required to store next node references.
+
+
+Linked list looks like this:
+head -> 5|next -> 7|next -> 3|next -> 8|next -> 9|next -> 2|null -> null
+
+
+
+
+
+
+
+
+
+
+
 
 
 
