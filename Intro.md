@@ -1658,7 +1658,7 @@ Linked list vs Array ? (Advantages of LL):
 
 
 Linked list looks like this:
-head -> 5|next -> 7|next -> 3|next -> 8|next -> 9|next -> 2|null -> null
+head -> 5|next -> 7|next -> 3|next -> 'a'|next -> 'm'|next -> 5.78|null -> null
 
 
 
