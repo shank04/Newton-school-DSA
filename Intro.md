@@ -1662,6 +1662,69 @@ head -> 5|next -> 7|next -> 3|next -> 'a'|next -> 'm'|next -> 5.78|null -> null
 
 
 
+* Doubly Linked list
+
+* Circular Linked List
+
+
+
+* Stacks
+
+Stack is a linear data structure which allows operations at specific ends.
+Stack is a Last In First Out (LIFO) or First In Last Out (FILO) data structure.
+
+Example of stack is a pile of plates.
+
+In a stack, insertion and deletion is only allowed at one end i.e. top.
+
+Stack supports following operations:
+* push - insert elements at the top of the list
+* pop - remove elements from the top of the list, removes the topmost element
+* peek - returns top most element
+* size - returns size of stack
+* isEmpty - returns true if the stack is empty, false otherwise
+
+
+Stacks can be implemented:
+
+* Using Arrays
+* Using LinkedList
+
+
+* problem:
+Check if the expression has balanced parenthesis:
+input: [(]){}
+output: 
+
+[({})] - true
+
+[(]) - false
+
+[()]{}{[()()]} - true
+
+[) - false
+
+()[]{} - true
+
+()[{}]) - 
+
+ 
+The bracket which opens first should be closed last 
+		or
+The bracket which opens last should get closed first
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

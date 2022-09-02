@@ -126,6 +126,10 @@ class LinkedList {
 	}
 }
 
+// head -> 3 -> 4 -> 5 -> null
+
+// null <- 3 <- 4 <- 5 <- head
+
 //head -> 8|10 -> 10|6 -> 6|5 -> 5|11 -> 11|null
 		   
 
