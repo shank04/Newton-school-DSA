@@ -78,7 +78,7 @@ class StackUsingArray {
 				return false;
 			}
 
-			char check = st.pop(); // [
+			char check = st.pop(); // (
 
 			switch (x) {
 				case ')':
@@ -103,6 +103,39 @@ class StackUsingArray {
 		}
 
 		return st.isEmpty();
+	}
+
+	void findNGE(int arr[]) { // 4, 5, 2, 25
+		StackUsingArray st = new StackUsingArray(); // stack: 25
+		st.push(arr[0]);
+
+		int element, next;
+
+		for (int i=1; i<arr.length; i++) {
+			next = arr[i]; // 25
+			if (st.isEmpty() == false) {
+				element = st.pop(); // 2
+
+				while (element < next) {
+					System.out.println(element + " -> " + next); // 4->5, 2->25, 5->25, 25->-1
+
+					if (st.isEmpty()) {
+						break;
+					}
+					element = st.pop(); // 5
+				}
+
+				if (element > next) {
+					st.push(element);
+				}
+				st.push(next);
+			}
+		}
+
+		while(st.isEmpty() == false) {
+			element = st.pop(); // 25
+			System.out.println(element + " -> " + -1);
+		}
 	}
 
 	public static void main(String args[]) {

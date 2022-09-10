@@ -1714,12 +1714,67 @@ The bracket which opens first should be closed last
 The bracket which opens last should get closed first
 
 
+* Find the next greater element for each element of array
+Input: [4, 5, 2, 25]
+Output:
+4 -> 5
+5 -> 25
+2 -> 25
+25 -> -1
+
+Input: [13, 7, 6, 12]
+Output:
+13 -> -1
+7 -> 12
+6 -> 12
+12 -> -1
+
+
+What is the advantage of using Stacks as LL vs Array ?
+There is no limitation of size, it can keep on growing.
+
+
+* Infix notation
+The expression of the form a operator b
+Eg: a+b, a/b, a+b*c
+
+* postfix notation
+The expressions of the form ab operator
+Eg: ab+, ab/, abc*+
+
+
+* prefix notation
+The expressions of the form operator ab
+Eg: +ab, /ab, +a*bc
 
 
 
 
+* Queue
+Queue is a linear data structure which allows operations at specific ends only.
+Insertion is allowed at rear end and delettion is allowed at front.
+Queue is a First In First Out type of data structure.
+
+Difference between stack and queue is inn deletion, in stack, element entered last is removed first
+and in queues element entered first is removed first.
+
+Basic operations on queue:
+Enqueue() - Insert elements at the rear end of the queue.
+Dequeue() - Remove elements from the front end of the queue.
+front() - returns the element at the front of queue
+rear() - returns the element at the rear end of queue.
+isEmpty() - tells if Queue is empty or not
+size() - returns size of queue.
 
 
+Queues can  be implemented using:
+Arrays
+Linked list
+
+* Implement Stack using Queues
+
+
+* Implement Queue using Stacks
 
 
 
